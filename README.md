@@ -14,6 +14,45 @@ We need a "proactive" approach to acquiring customers before they embark on thei
 ## Target: 
 Predict the target outcome (customers buying holidays). 
 
+## Explanatory Variables Info
+
+RangeIndex: 50000 entries, 0 to 49999
+Data columns (total 14 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   num_passengers         50000 non-null  int64  
+ 1   sales_channel          50000 non-null  object 
+ 2   trip_type              50000 non-null  object 
+ 3   purchase_lead          50000 non-null  int64  
+ 4   length_of_stay         50000 non-null  int64  
+ 5   flight_hour            50000 non-null  int64  
+ 6   flight_day             50000 non-null  object 
+ 7   route                  50000 non-null  object 
+ 8   booking_origin         50000 non-null  object 
+ 9   wants_extra_baggage    50000 non-null  int64  
+ 10  wants_preferred_seat   50000 non-null  int64  
+ 11  wants_in_flight_meals  50000 non-null  int64  
+ 12  flight_duration        50000 non-null  float64
+ 13  booking_complete       50000 non-null  int64  
+dtypes: float64(1), int64(8), object(5)
+
+**Context**
+num_passengers = number of passengers travelling
+sales_channel = sales channel booking was made on
+trip_type = trip Type (Round Trip, One Way, Circle Trip)
+purchase_lead = number of days between travel date and booking date
+length_of_stay = number of days spent at destination
+flight_hour = hour of flight departure
+flight_day = day of week of flight departure
+route = origin -> destination flight route
+booking_origin = country from where booking was made
+wants_extra_baggage = if the customer wanted extra baggage in the booking
+wants_preferred_seat = if the customer wanted a preferred seat in the booking
+wants_in_flight_meals = if the customer wanted in-flight meals in the booking
+flight_duration = total duration of flight (in hours)
+booking_complete = flag indicating if the customer completed the booking
+
+
 ## Phases: 
 
 PHASE 1: Data Understanding & Preparation
