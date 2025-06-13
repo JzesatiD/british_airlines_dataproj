@@ -1,4 +1,66 @@
-# British Airways Machine Learning Project
+# British Airways Machine Learning Sales Conversions
+
+### Insight & Recommendation
+
+This analysis uncovered an alarmingly low overall holiday booking conversion rate of 15%, prompting a focused investigation into what factors drive or discourage bookings. By analyzing 50,000 customer records, we identified key behavioral and demographic indicators that significantly influence booking likelihood.
+
+Key insights include:
+
+Trip Type: RoundTrip selections converted at 15.1%, nearly 3x higher than OneWay or CircleTrip, making it a strong signal of booking intent.
+
+Booking Origin: Customers from Malaysia, Indonesia, and Thailand showed the highest conversion rates (up to 34.4%), revealing geographic clusters of high-intent customers.
+
+Customer Add-ons: Requests for extra baggage, preferred seating, and in-flight meals were consistently associated with higher booking rates, indicating stronger pre-purchase intent.
+
+Trip Characteristics: Longer trips (duration and stay length) showed a negative correlation with booking, suggesting complexity or cost may deter follow-through.
+
+Recommendation:
+Use these predictive signals to proactively target customers more likely to convert, especially those selecting RoundTrips, traveling from high-performing countries, or exhibiting interest in add-ons. Segment-specific offers and earlier engagement (e.g., shorter lead time windows) can further improve booking outcomes.
+
+### Why This Approach Was Taken
+
+Exploratory Analysis
+
+We began by investigating the target variable (booking_complete), discovering a strong class imbalance (roughly 85% non-bookers). This guided our choice to use proportional metrics and segment-level visualizations (e.g., booking rates by category) instead of raw counts, to better understand performance across customer groups.
+
+Statistical Profiling
+
+To determine whether observed trends were statistically meaningful or just noise, we used logistic regression. This allowed us to:
+
+Confirm statistical significance of variables (e.g., booking origin, trip type)
+
+Understand the direction of impact (positive or negative)
+
+Verify that the predictors had real signal, not just volume
+
+This insight was critical for selecting features with true predictive value and excluding or downweighting less relevant attributes (e.g., flight_hour).
+
+Predictive Modeling
+
+We used a Random Forest classifier due to its robustness to noise, ability to handle categorical data (after encoding), and built-in interpretability via feature importance scoring.
+
+Our model achieved:
+
+ROC AUC Score: 0.76 — meaning the model can correctly rank a booker higher than a non-booker 76% of the time
+
+F1 Score: 0.37 (after threshold tuning) — balancing the tradeoff between precision and recall in predicting bookings
+
+We adjusted the classification threshold to improve recall from 12% to 39%, enabling the model to catch more real booking cases while accepting slightly more false positives — a fair tradeoff in a proactive engagement scenario.
+
+### Business Value
+
+This model and analysis demonstrate that it is viable and effective to predict which customers are likely to book a holiday. Key findings have direct business applications:
+
+Customer segmentation for retargeting or priority messaging
+
+Channel prioritization based on conversion likelihood
+
+Route-level and region-based marketing optimization
+
+Early behavior (e.g., extra service selection) as signals of intent
+
+Overall, this project provides a practical foundation for data-driven, proactive customer engagement in the travel booking lifecycle.
+
 
 ### Plan: 
 We need a "proactive" approach to acquiring customers before they embark on their holiday. 
