@@ -1,5 +1,5 @@
 # British Airways Machine Learning Sales Conversions
-!['deliverable'](https://github.com/JzesatiD/british_airlines_dataproj/blob/main/diaz_final_deliverable.pdf)
+![PDF Deliverable Summary](https://github.com/JzesatiD/british_airlines_dataproj/blob/main/diaz_final_deliverable.pdf)
 
 ### Insight & Recommendation
 
