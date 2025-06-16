@@ -1,5 +1,20 @@
-# British Airways Machine Learning Project
+# British Airways Booking Sales Conversion Machine Learning - Project Overview
 
+
+This project aimed to evaluate whether customer booking data could be used to predict the likelihood of a holiday purchase. The goal was to build an interpretable machine learning model that could support proactive engagement strategies by identifying high-intent customers before they leave the booking flow.
+---
+British Airways, a major global airline, faces increasing competition and changing consumer behavior in the travel industry. As customers now have access to a wealth of options online, booking decisions are more fragmented and price-sensitive than ever. The airline wanted to shift from reactive marketing efforts to a more proactive strategy that leverages data to anticipate when and which customers are most likely to convert.
+
+The project was framed around a realistic data simulation involving 50,000 customer interactions, with a focus on predicting whether a customer would complete a holiday booking. The company sought to understand which early-stage behaviors (e.g., trip type, purchase lead time, interest in extras) could be used to build a reliable predictive model. The end goal was to enable targeted interventions and marketing efforts before customers abandon the booking process.
+
+## Executive Summary
+
+This project analyzed 50,000 customer holiday booking records to determine the feasibility of predicting purchase behavior based on booking patterns and customer interactions. The overall booking conversion rate was approximately 15%, prompting a focus on identifying high-intent segments. A supervised machine learning model was developed and calibrated to improve recall, ultimately identifying 39% of actual bookers while maintaining a precision of 36%. The model’s ROC AUC score of 0.76 indicates strong discriminatory power in ranking likely bookers above non-bookers. 
+
+Key behavioral drivers included purchase lead time, customer add-on selections, and trip type, particularly round trips. These insights support the use of predictive modeling to proactively engage customers before booking abandonment.
+
+![dashboard](https://github.com/JzesatiD/british_airlines_dataproj/blob/main/assets/dashb.png?raw=true)
+---
 ### Plan: 
 We need a "proactive" approach to acquiring customers before they embark on their holiday. 
 - A data PREDICTIVE model
